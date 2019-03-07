@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Isabel Cooper",
   "license": "ISC"

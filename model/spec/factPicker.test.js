@@ -17,9 +17,9 @@ describe('FactPicker', function() {
     describe('Random fact selection', function() {
         it('should return a random number up to length of array', function() {
             let factpicker = new FactPicker("cat");
-            const mock = jest.spyOn(FactPicker.prototype, '_randomNumber')
-            mock.mockReturnValue(3);
-            expect(factpicker._randomNumber()).toEqual(3)
+            const mock = jest.spyOn(Math, 'random')
+            mock.mockReturnValue(1);
+            expect(factpicker._randomNumber()).toEqual(6)
         });
 
         it('should return a random fact from the array', function() {

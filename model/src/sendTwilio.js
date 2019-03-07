@@ -14,7 +14,8 @@ TwilioSender.prototype.send = function(fact) {
             to: this.toNumber
         })
         .then(message => console.log(message.sid));
-    return fact
 }
 
+
 module.exports = TwilioSender;
+
