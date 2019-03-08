@@ -1,8 +1,4 @@
-- form create new recipient 
-- recipient initialises with a counter 
-- and continues to trigger messages until counter is 10 - then final message. 
-
-OR 
+ 
 -  form creates SENDER
 - sender has a recipient 
 - send has a counter 
@@ -12,7 +8,7 @@ OR
 
 
 TODO 
-- finish model above 
+- finish model  
 - send a series of texts: timing?!?!
 - connect to localhost (react v post get)
 - prettify page 
@@ -28,4 +24,13 @@ possible
 - 
 
 
+
+Local Database Setup for testing
+
+```
+psql;
+CREATE DATABASE dicaprifacts;
+\c dicaprifacts;
+CREATE TABLE recipients (id SERIAL PRIMARY KEY, email VARCHAR);
+```
 

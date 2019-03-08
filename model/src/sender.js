@@ -10,8 +10,12 @@ class Sender {
 }
 
 Sender.prototype.send = function(message) {
-    this.twilio.send(message);
-    this.sent += 1
+    if (this.sent >= 10) {
+
+    } else {
+        this.twilio.send(message);
+        this.sent += 1
+    }
 };
 
 module.exports = Sender;
