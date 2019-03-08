@@ -87,13 +87,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const Twilio = require("../src/sendTwilio.js");
-const Recipient = require("../src/recipient.js");
+const Sender = require("../src/sender.js");
 &nbsp;
 class Sender {
     constructor(name, twilio = new Twilio) {
         this.sent = 0;
         this.twilio = twilio;
-        this.recipient = new Recipient(name);
+        this.recipient = new Sender(name);
     }
 }
 &nbsp;

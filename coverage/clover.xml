@@ -27,7 +27,7 @@
         <line num="24" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
-      <file name="recipient.js" path="/Users/Isabel/projects/diCapriFacts/model/src/recipient.js">
+      <file name="sender.js" path="/Users/Isabel/projects/diCapriFacts/model/src/sender.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>

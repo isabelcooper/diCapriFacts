@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var recipientController = require('../controllers/recipient');
+var senderController = require('../controllers/sender');
 
-router.get('/create', recipientController.create);
+router.get('/create', senderController.create);
 //
 // router.get('/', post_controller.post_show);
 

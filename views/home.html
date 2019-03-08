@@ -6,11 +6,20 @@
     </head>
     <body>
     <h1> April Fool :) </h1>
-    <p> Still got time to prank your friends? </p>
-        <form action="/recipient/create" method="get">
+    <h2> Still got time to prank your friends? </h2>
+    <p> Sign them up here:  </p>
+        <form action="/sender/create" method="get">
             <input type="tel" name = "phone" placeholder="phone number"><br>
-            OR <br>
-            <input type="email" name = "email" placeholder="email address"><br>
+            <!--OR <br>-->
+            <!--<input type="email" name = "email" placeholder="email address"><br>-->
+            <p>Select fact theme:</p>
+            <select name ="theme">
+                <option value ="cat">Cat Facts</option>
+                <option value ="dicapri">DiCaprio Facts</option>
+                <option value ="poke">Pokeman Facts</option>
+                <option value ="triptease">Triptease Trivia</option>
+            </select> <br>
+            <input type ="checkbox" name="reveal"/> Reveal yourself at the end? <br>
             <input type="submit" name ="submit" value="Send"/>
         </form>
     </body>
