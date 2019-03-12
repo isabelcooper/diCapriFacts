@@ -22,7 +22,7 @@ Sender.prototype.addRecipient = function(phone) {
 };
 
 Sender.prototype.run = function() {
-    this.sent >= 10 ? this._finalFact() : this._randomFact()
+    this.sent >= 9 ? this._finalFact() : this._randomFact()
 };
 
 Sender.prototype._finalFact = function() {
