@@ -39,11 +39,17 @@ describe('FactPicker', function() {
     });
 
     describe('Last message', function() {
-        it('should return string for final array', function() {
-            let factpicker = new FactPicker("cat");
-            expect(factpicker.finalFact()).toContain('Congratulations on surviving catfacts.')
-            // handle message counting, triggering and timing in another object
-        })
-    })
+        describe('Reveal state', function() {
+            it('should return default string if reveal is false', function() {
+                let factpicker = new FactPicker("cat");
+                expect(factpicker.finalFact(false)).toContain('Congratulations on surviving catfacts.')
+            });
+
+            it('should return named string if reveal is true', function() {
+                let factpicker = new FactPicker("cat");
+                expect(factpicker.finalFact(true)).toContain('You have been pranked by')
+            });
+        });
+    });
 });
 

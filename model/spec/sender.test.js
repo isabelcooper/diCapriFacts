@@ -1,33 +1,38 @@
 const Sender = require("../src/sender.js");
 
-class FakeTwilio {
-    constructor(toNumber) {
-        this.toNumber = toNumber
-    }
-}
+class FakeTwilio { }
+FakeTwilio.prototype.send = function(message) { };
 
-FakeTwilio.prototype.send = function(message) {
-    console.log("hello");
-    return message
-}
+class FakeFactPicker { };
+FakeFactPicker.prototype.randomFact = function(category) { };
 
 describe('Sender', function() {
     it('should count how many messages have been sent', function() {
-        let sender = new Sender();
-        expect(sender.sent).toEqual(0)
-        sender.send()
-        expect(sender.sent).toEqual(1)
-        sender.send()
+        let sender = new Sender(true, "cat", FakeTwilio);
+        expect(sender.sent).toEqual(0);
+        sender.run();
+        expect(sender.sent).toEqual(1);
+        sender.run();
         expect(sender.sent).toEqual(2)
     })
 
-    // it('should send a message to the twilio sender', function() {
-    //     let sender = new Sender(new FakeTwilio);
-    //     const mock = jest.spyOn(FakeTwilio.prototype, 'send')
-    //     mock.mockReturnValue("message");
-    //     // expect(FakeTwilio.send()).toBeCalledWith("message")
-    //     // // FakeTwilio.send("message")
-    //     // sender.send("message")
+    it('should send a message to the twilio sender', function() {
+        faketwilio = FakeTwilio;
+        fakeFactPicker = FakeFactPicker;
+        let sender = new Sender(true, "cat", faketwilio, fakeFactPicker);
+
+        jest.spyOn(faketwilio.prototype, 'send')
+        mock = jest.spyOn(fakeFactPicker.prototype, 'randomFact')
+        mock.mockReturnValue("message");
+
+        sender.run();
+        expect(faketwilio.prototype.send).toBeCalledWith("message");
+    });
+
+    // it('should send final message to twilio on 10th send', function() {
+    //    need mocking as above
     // })
+
+    // update tables to track user, sender, theme and sent messages
 })
 

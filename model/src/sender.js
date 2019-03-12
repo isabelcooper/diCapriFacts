@@ -22,26 +22,23 @@ Sender.prototype.addRecipient = function(phone) {
 };
 
 Sender.prototype.run = function() {
-    if (this.sent >= 10) {
-        message = this.factPicker.finalFact()
-        this.twilio.sendFinal(message) // need to think about where final message is stored?
-    } else {
-        message = this.factPicker.randomFact()
-        this.twilio.send(message);
-        this.sent += 1
-    }
+    this.sent >= 10 ? this._finalFact() : this._randomFact()
 };
 
+Sender.prototype._finalFact = function() {
+    message = this.factPicker.finalFact(this.reveal);
+    this.twilio.sendFinal(message)
+    // need to think about where final message is stored?
+}
+
+Sender.prototype._randomFact = function() {
+    message = this.factPicker.randomFact();
+    this.twilio.send(message);
+    this._countSent()
+}
+
+Sender.prototype._countSent = function() {
+    this.sent += 1
+}
+
 module.exports = Sender;
-
-// ONE
-// new sender ( theme, reveal) >> creates in table sender
-//sender.addRecipient(number) >> creates in table recipient with sender id
-// sender.run >> triggers send handing in user.number as argument
-
-// retrieving sender can access user_id => user email through a join? or create a user object to access.
-
-    // 2
-    // new recipient (number) >> creates in table recipient
-    // recipient.add sender (theme, reveal) >> creates in table sender with user id
-// recipient.sender.run sending process >> still has to create both objects on return
