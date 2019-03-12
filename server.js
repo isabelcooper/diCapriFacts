@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 5432;
 const sender = require('./routes/sender');
+console.log("here")
 
 // app.use(express.static(__dirname + '/public'));
 

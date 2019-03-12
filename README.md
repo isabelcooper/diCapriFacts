@@ -1,14 +1,7 @@
- 
--  form creates SENDER
-- sender has a recipient 
-- send has a counter 
-- sender has a twilio obj
-- senderis master of what to send next 
-
 
 
 TODO 
-- finish model  
+- connect model to database: when and what is created
 - send a series of texts: timing?!?!
 - connect to localhost (react v post get)
 - prettify page 
@@ -18,7 +11,6 @@ TODO
 - get sense check 
 - feature tests
 
-possible 
 - add email option 
 - add readme
 - 

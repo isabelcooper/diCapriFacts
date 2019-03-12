@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552381855876" clover="3.2.0">
-  <project timestamp="1552381855876" name="All files">
+<coverage generated="1552410685382" clover="3.2.0">
+  <project timestamp="1552410685382" name="All files">
     <metrics statements="57" coveredstatements="51" conditionals="7" coveredconditionals="5" methods="15" coveredmethods="10" elements="79" coveredelements="66" complexity="0" loc="57" ncloc="57" packages="3" files="6" classes="6"/>
     <package name="diCapriFacts">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

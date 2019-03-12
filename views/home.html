@@ -6,13 +6,13 @@
         <!--<link rel="stylesheet" href="style.css">-->
         <link rel="stylesheet" href="styling/bootstrapminty.css">
         <!--<link rel="stylesheet" href="../styling/bootstrapminty.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-        <title>April Fool's</title>
+        <title>April Fool</title>
     </head>
     <body>
     <h1> April Fool :) </h1>
-    <h2> Still got time to prank your friends? </h2>
-    <p> Sign them up here:  </p>
-        <form action="/sender/create" method="get">
+    <h2> You've been pranked. Unlucky. </h2>
+    <p> Still got time to prank your friends? Sign them up here:  </p>
+        <form action="/sender/create" method="get" name="addRecipient">
             <input type="tel" name = "phone" placeholder="phone number"><br>
             <!--OR <br>-->
             <!--<input type="email" name = "email" placeholder="email address"><br>-->
@@ -23,7 +23,7 @@
                 <option value ="poke">Pokeman Facts</option>
                 <option value ="triptease">Triptease Trivia</option>
             </select> <br>
-            <input type ="checkbox" name="reveal"/> Reveal yourself at the end? <br>
+            <input type="checkbox" name="reveal"/> Reveal yourself at the end? <br>
             <input type="submit" name ="submit" value="Send"/>
         </form>
     </body>
