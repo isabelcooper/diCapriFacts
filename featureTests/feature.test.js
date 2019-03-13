@@ -23,10 +23,10 @@ describe('Adding a recipient', () => {
             await expect(page).toFillForm('form[name="addRecipient"]', {
                 phone: '012345 678910',
                 theme: "cat",
-                reveal: true
+                reveal: 'true',
             });
-            await page.click('#submit');
-            await expect(page).toMatch("Submitted")
+            // await page.click('#submit');
+            await expect(page).toMatch("Congratulations")
             // await expect(page).toMatch("") expectation on url /success?
         });
     });
@@ -37,12 +37,12 @@ describe('Adding a recipient', () => {
         });
 
         it("shows a confirmation message", async () => {
-            await expect(page).toMatch("thank you");
+            await expect(page).toMatch("Congratulations");
         });
 
         it("shows a confirmation message", async () => {
-            await expect(page).to // click button
-            await expect(page).toMatch("thank you");
+            await page.click('#more');
+            await expect(page).toMatch("April Fool");
         });
     })
 

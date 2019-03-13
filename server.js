@@ -16,5 +16,5 @@ app.get("/success", (req, res) => {
 });
 app.use('/sender', sender);
 
-// app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views'));
 app.listen(port, () => console.log(`MAGICAL app listening here: ${port}!`));

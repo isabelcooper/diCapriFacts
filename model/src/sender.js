@@ -40,5 +40,8 @@ Sender.prototype._randomFact = function() {
 Sender.prototype._countSent = function() {
     this.sent += 1
 }
-
+// Sender.prototype.updateDB = function() {
+//     connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${email}', '${phone}')`);
+//     // find sender in DB (match on id) & upxdate ??
+// }
 module.exports = Sender;
