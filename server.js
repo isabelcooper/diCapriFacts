@@ -3,8 +3,6 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const sender = require('./routes/sender');
-const {AccSId, AuthToken, FromNumber} = require ('.././config.js')
-
 
 // app.use(express.static(__dirname + '/public'));
 
