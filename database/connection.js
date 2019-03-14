@@ -4,7 +4,7 @@ const Pool = require("pg").Pool;
 // dotenv.config();
 
 const pool = new Pool({
-    connectionString: DataBaseURL ,
+    connectionString: process.env.DATABASE_URL ,
     ssl: !Local
 });
 console.log(`Connected to database ${DataBaseURL}`);
