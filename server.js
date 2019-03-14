@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 const sender = require('./routes/sender');
 
 // app.use(express.static(__dirname + '/public'));
