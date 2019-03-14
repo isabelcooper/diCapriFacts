@@ -5,11 +5,9 @@ const port = 3000;
 const sender = require('./routes/sender');
 
 // app.use(express.static(__dirname + '/public'));
-// console.log(app)
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views", "home.html"));
-    // console.log("here")
 });
 
 app.get("/success", (req, res) => {

@@ -1,20 +1,17 @@
-
-
 TODO 
 - connect model to database: when and what is created
 - send a series of texts: timing?!?!
-- connect to localhost (react v post get)
-- prettify page 
+- prettify page
 - add heroku server (and possibly staging env) 
-- consider ways to improve text experience 
 - add facts!!
 - get sense check 
 - feature tests
 
+Possible
 - add email option 
 - add readme
-- 
-
+- add a button to another page with all pranksters and count of pranks played??
+- consider ways to improve text experience 
 
 
 Local Database Setup for testing
