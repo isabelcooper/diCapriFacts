@@ -1,4 +1,5 @@
 TODO 
+-fix db connection for heroku
 - connect model to database: when and what is created
 - send a series of texts: timing?!?!
 - prettify page
