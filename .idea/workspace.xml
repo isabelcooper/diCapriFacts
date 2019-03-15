@@ -18,16 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/sender.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="540">
+              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/src/sender.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/featureTests/feature.test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -118,13 +127,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/controllers/sender.js" />
         <option value="$PROJECT_DIR$/model/src/sendTwilio.js" />
-        <option value="$PROJECT_DIR$/model/src/sender.js" />
         <option value="$PROJECT_DIR$/model/spec/sender.test.js" />
         <option value="$PROJECT_DIR$/model/src/recipient.js" />
         <option value="$PROJECT_DIR$/model/spec/recipient.test.js" />
         <option value="$PROJECT_DIR$/model/spec/sendTwilio.test.js" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/featureTests/feature.test.js" />
+        <option value="$PROJECT_DIR$/model/src/sender.js" />
       </list>
     </option>
   </component>
@@ -238,12 +247,12 @@
       <workItem from="1552513342677" duration="2007000" />
       <workItem from="1552555676505" duration="716000" />
       <workItem from="1552588498645" duration="258000" />
-      <workItem from="1552588783470" duration="10591000" />
+      <workItem from="1552588783470" duration="10862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59609000" />
+    <option name="totallyTimeSpent" value="59880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="19" y="23" width="1193" height="1057" extended-state="0" />
@@ -425,24 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/sender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/spec/sender.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/sender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -488,6 +483,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="27" column="116" selection-start-line="27" selection-start-column="116" selection-end-line="27" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/src/sender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
         </state>
       </provider>
     </entry>

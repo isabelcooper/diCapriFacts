@@ -30,6 +30,7 @@ Sender.prototype._finalFact = function() {
 
 Sender.prototype._randomFact = function() {
     message = this.factPicker.randomFact();
+    console.log("to number:" + this.recipient.phone);
     this.twilio.send(message, this.recipient.phone);
     this._countSent()
 };
