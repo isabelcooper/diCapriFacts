@@ -8,6 +8,7 @@ class TwilioSender {
 }
 TwilioSender.prototype.send = function(fact) {
      console.log("in twilio send")
+    console.log(`${fact}, ${FromNumber}, ${this.toNumber}` )
     client.messages
         .create({
             body: fact,
@@ -15,7 +16,8 @@ TwilioSender.prototype.send = function(fact) {
             to: this.toNumber
         })
         .then(message => console.log(message.sid));
-}
+     console.log("twilio send compelte")
+};
 
 
 module.exports = TwilioSender;
