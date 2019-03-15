@@ -1,18 +1,16 @@
 const Sender = require("../model/src/sender.js")
 
 exports.create = function (req, res) {
-    console.log(req.query);
     sender = new Sender(req.query.reveal, req.query.theme);
-    // sender.addRecipient(req.query.phone);
+    sender.addRecipient(req.query.phone);
     sender.run()
   //  sender.saveToDB(req.query.phone);
-    console,log("run complete")
     res.redirect("/success")
 };
 
 // sender: `
 // 1) add recipient to DB
-// 2) run first text
+// 2) run first text TO CORRECT NUMBER
 // 3) update db to remember first text has been sent
 // 4) add a time delay
 // 5) find recipient by id in db when time elapsed (??) & trigger next .... etc.

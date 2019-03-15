@@ -11,7 +11,7 @@ class Sender {
         this.reveal = reveal;
         this.theme = theme;
         this.twilio = new twilio;
-        this.factPicker = new factpicker(this.theme)
+        this.factPicker = new factpicker(this.theme);
         this.recipient = []
     }
 }
@@ -22,7 +22,6 @@ Sender.prototype.addRecipient = function(phone) {
 };
 
 Sender.prototype.run = function() {
-    console.log("in run")
     this.sent >= 9 ? this._finalFact() : this._randomFact()
 };
 
@@ -34,14 +33,14 @@ Sender.prototype._finalFact = function() {
 
 Sender.prototype._randomFact = function() {
     message = this.factPicker.randomFact();
-    console.log("random fact: " + message)
+    console.log("random fact: " + message);
     this.twilio.send(message);
     this._countSent()
-}
+};
 
 Sender.prototype._countSent = function() {
     this.sent += 1
-}
+};
 // Sender.prototype.updateDB = function() {
 //     connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${email}', '${phone}')`);
 //     // find sender in DB (match on id) & upxdate ??
