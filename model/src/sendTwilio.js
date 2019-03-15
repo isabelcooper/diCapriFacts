@@ -8,7 +8,8 @@ class TwilioSender {
 }
 TwilioSender.prototype.send = function(fact) {
      console.log("in twilio send")
-    console.log(`${fact}, ${FromNumber}, ${this.toNumber}` )
+    console.log(process.env)
+    console.log(`${fact}, ${process.env.FROMNUMBER}, ${this.toNumber}` )
     client.messages
         .create({
             body: fact,
