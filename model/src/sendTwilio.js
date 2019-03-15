@@ -1,17 +1,13 @@
 const { AccSId, AuthToken, FromNumber, TestToNumber } = require('../.././config');
 const client = require('twilio')(AccSId, AuthToken);
 
-class TwilioSender {
-    constructor(toNumber = TestToNumber) {
-        this.toNumber = toNumber
-    }
-}
-TwilioSender.prototype.send = function(fact) {
+class TwilioSender {}
+TwilioSender.prototype.send = function(fact, toNumber) {
     client.messages
         .create({
             body: fact,
             from: FromNumber,
-            to: this.toNumber
+            to: toNumber
         })
         .then(message => console.log(message.sid));
 };

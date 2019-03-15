@@ -3,6 +3,7 @@ const Sender = require("../model/src/sender.js")
 exports.create = function (req, res) {
     sender = new Sender(req.query.reveal, req.query.theme);
     sender.addRecipient(req.query.phone);
+    console.log(sender)
     sender.run()
   //  sender.saveToDB(req.query.phone);
     res.redirect("/success")

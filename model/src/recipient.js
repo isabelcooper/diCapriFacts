@@ -7,8 +7,7 @@ class Recipient {
 }
 
 Recipient.prototype.saveToDB = async function() {
-    await connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${this.phone}')`);
-    console.log("recipient added to DB");
+    await connection.pool.query(`INSERT INTO recipients (phone) VALUES ('${this.phone}')`);
 };
 
 module.exports = Recipient;

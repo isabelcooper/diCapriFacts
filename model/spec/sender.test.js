@@ -1,7 +1,7 @@
 const Sender = require("../src/sender.js");
 
 class FakeTwilio { }
-FakeTwilio.prototype.send = function(message) { };
+FakeTwilio.prototype.send = function(message, phone) { };
 FakeTwilio.prototype.sendFinal = function(message) { };
 
 class FakeFactPicker { };
@@ -22,13 +22,14 @@ describe('Sender', function() {
         faketwilio = FakeTwilio;
         fakeFactPicker = FakeFactPicker;
         let sender = new Sender(true, "cat", faketwilio, fakeFactPicker);
+        sender.addRecipient(process.env.TESTTONUMBER);
 
-        jest.spyOn(faketwilio.prototype, 'send')
+        jest.spyOn(faketwilio.prototype, 'send');
         mock = jest.spyOn(fakeFactPicker.prototype, 'randomFact');
         mock.mockReturnValue("message");
 
         sender.run();
-        expect(faketwilio.prototype.send).toBeCalledWith("message");
+        expect(faketwilio.prototype.send).toBeCalledWith("message", process.env.TESTTONUMBER);
     });
 
     describe('10th message', function() {

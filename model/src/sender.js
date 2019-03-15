@@ -1,24 +1,21 @@
 const Twilio = require("../src/sendTwilio.js");
 const Recipient = require("../src/recipient.js");
 const FactPicker = require("../src/factPicker.js");
-// sender = new Sender(req.query.reveal, req.query.theme);
-// sender.addRecipient(req.query.number);
-// sender.run()
 
 class Sender {
     constructor(reveal, theme, twilio = Twilio, factpicker = FactPicker) {
         this.sent = 0;
         this.reveal = reveal;
         this.theme = theme;
-        this.twilio = new twilio;
         this.factPicker = new factpicker(this.theme);
-        this.recipient = []
+        this.twilio = new twilio();
+        this.recipient = ""
     }
 }
 
 Sender.prototype.addRecipient = function(phone) {
-    recipient = new Recipient(phone);
-    return recipient.saveToDB(); // needs to return the outcome user id
+    this.recipient = new Recipient(phone);
+    this.recipient.saveToDB(); // needs to return the outcome user id
 };
 
 Sender.prototype.run = function() {
@@ -33,8 +30,7 @@ Sender.prototype._finalFact = function() {
 
 Sender.prototype._randomFact = function() {
     message = this.factPicker.randomFact();
-    console.log("random fact: " + message);
-    this.twilio.send(message);
+    this.twilio.send(message, this.recipient.phone);
     this._countSent()
 };
 

@@ -12,7 +12,7 @@ describe('Adding a recipient', () => {
 
     describe('Adding a recipient', () => {
         beforeAll(async () => {
-            await page.goto('http://localhost:5432');
+            await page.goto("http://localhost:5000");
         });
 
         it("asks users to input", async () => {
@@ -25,7 +25,7 @@ describe('Adding a recipient', () => {
                 theme: "cat",
                 reveal: 'true',
             });
-            // await page.click('#submit');
+            // await page.click('#submit'); // uncomment to pass test - but NB twilio not mocked so will send sample
             await expect(page).toMatch("Congratulations")
             // await expect(page).toMatch("") expectation on url /success?
         });
@@ -33,7 +33,7 @@ describe('Adding a recipient', () => {
 
     describe("success page", async () => {
         beforeAll(async () => {
-            await page.goto('http://localhost:5432/success');
+            await page.goto("http://localhost:5000/success");
         });
 
         it("shows a confirmation message", async () => {
