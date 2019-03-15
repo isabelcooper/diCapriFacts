@@ -6,6 +6,7 @@ exports.create = function (req, res) {
     // sender.addRecipient(req.query.phone);
     sender.run()
   //  sender.saveToDB(req.query.phone);
+    console,log("run complete")
     res.redirect("/success")
 };
 

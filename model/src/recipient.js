@@ -1,8 +1,8 @@
 let connection = require('../../database/connection')
 
 class Recipient {
-    constructor(email){
-        this.email = email;
+    constructor(phone){
+        this.phone = phone
     }
 
     // static async saveToDB(email, phone) {
@@ -10,8 +10,8 @@ class Recipient {
     // };
 }
 
-Recipient.prototype.saveToDB = function(email, phone) {
-    connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${email}', '${phone}')`);
+Recipient.prototype.saveToDB = async function() {
+    await connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${this.phone}')`);
 }
 
 module.exports = Recipient;
