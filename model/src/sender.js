@@ -22,6 +22,7 @@ Sender.prototype.addRecipient = function(phone) {
 };
 
 Sender.prototype.run = function() {
+    console.log("in run")
     this.sent >= 9 ? this._finalFact() : this._randomFact()
 };
 
@@ -33,6 +34,7 @@ Sender.prototype._finalFact = function() {
 
 Sender.prototype._randomFact = function() {
     message = this.factPicker.randomFact();
+    console.log("random fact: " + message)
     this.twilio.send(message);
     this._countSent()
 }

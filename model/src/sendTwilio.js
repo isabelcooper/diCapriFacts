@@ -7,6 +7,7 @@ class TwilioSender {
     }
 }
 TwilioSender.prototype.send = function(fact) {
+     console.log("in twilio send")
     client.messages
         .create({
             body: fact,
