@@ -18,28 +18,31 @@ Sender.prototype.addRecipient = function(phone) {
     this.recipient.saveToDB(); // needs to return the outcome user id
 };
 
-Sender.prototype.run = function() {
-    this.sent >= 9 ? this._finalFact() : this._randomFact()
+Sender.prototype.runSet = function() {
+    this.run();
+    while (this.sent < 10 ) { this._runWithDelay() }
 };
 
-Sender.prototype._finalFact = function() {
-    message = this.factPicker.finalFact(this.reveal);
-    this.twilio.sendFinal(message)
-    // need to think about where final message is stored?
-}
+Sender.prototype._runWithDelay = function(){
+    setTimeout(this.run, 50000 );
+};
 
-Sender.prototype._randomFact = function() {
-    message = this.factPicker.randomFact();
-    console.log("to number:" + this.recipient.phone);
-    this.twilio.send(message, this.recipient.phone);
-    this._countSent()
+Sender.prototype.run = function() {
+    let fact = this.sent === 9
+        ? this.factPicker.finalFact(this.reveal)
+        : this.factPicker.randomFact();
+    this.twilio.send(fact, this.recipient.phone);
+    this._countSent();
 };
 
 Sender.prototype._countSent = function() {
     this.sent += 1
 };
-// Sender.prototype.updateDB = function() {
-//     connection.pool.query(`INSERT INTO recipients (email, phone) VALUES ('${email}', '${phone}')`);
-//     // find sender in DB (match on id) & upxdate ??
-// }
+
+Sender.prototype._randomTime = function() {
+    return Math.floor(Math.random() * 900) - 120;
+};
+
 module.exports = Sender;
+
+// update sent

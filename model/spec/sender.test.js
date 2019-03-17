@@ -56,6 +56,31 @@ describe('Sender', function() {
         });
     });
 
+    describe('#randomTime', function() {
+        it('should return time that makes sense', function() {
+            let sender = new Sender(true, "cat", faketwilio, fakeFactPicker);
+            spy = jest.spyOn(Math, 'random');
+            spy.mockReturnValue(200);
+            expect(sender._randomTime()).toEqual(179880)
+        });
+    });
+
+    describe('#runSet()', function() {
+        fakeFactPicker = FakeFactPicker;
+        faketwilio = FakeTwilio;
+        let sender = new Sender(true, "cat", faketwilio, fakeFactPicker);
+        jest.spyOn(fakeFactPicker.prototype, 'finalFact');
+        fakeTimer= jest.spyOn(sender, "_randomTime");
+        fakeTimer.mockReturnValue(500);
+
+        // it('should send total 10 messages', function() {
+        //     sender.runSet();
+        //     expect(fakeFactPicker.prototype.randomFact).toHaveBeenCalledTimes(9);
+        //     expect(fakeFactPicker.prototype.finalFact).toHaveBeenCalledTimes(1);
+        // });
+    });
+
+
     // update tables to track user, sender, theme and sent messages
 });
 
