@@ -1,8 +1,7 @@
 TODO 
-- ensure phone number is the one entered
+- ensure phone number is the one entered - add test
 - connect model to database: when and what is created
 - send a series of texts: timing?!?!
-- add heroku server (and possibly staging env) 
 - add facts!!
 - get sense check 
 
@@ -12,6 +11,7 @@ Possible
 - add sender name 
 - add a button to another page with all pranksters and count of pranks played??
 - consider ways to improve text experience 
+= get a better web domain
 
 
 Local Database Setup for testing

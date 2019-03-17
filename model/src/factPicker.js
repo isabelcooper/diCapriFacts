@@ -1,7 +1,8 @@
 const facts = {
     "cat": ["catone", "cattwo", "catthree","catfour", "catfive", "catsix" ],
-    "dog": ["dogone", "dogtwo", "dogthree"],
-    "dicapri": ["dicapri1", "dicapri2"]
+    "poke": ["poke1", "poke2", "poke4","poke5", "poke6", "poke7", "poke8", "poke9", "poke10"],
+    "dicapri": ["dicapri1", "dicapri2"],
+    "triptease": ["tt1", "tt2"]
 };
 
 class FactPicker {
