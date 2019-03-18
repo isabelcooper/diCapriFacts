@@ -13,6 +13,18 @@ class Sender {
         this.twilio = new twilio();
         this.recipient = ""
     }
+
+    static async getSenders() {
+        var senders = await connection.pool.query(`SELECT * FROM recipients`);
+        var senderArray = [];
+        senders.rows.forEach(sender => senderArray.push(new Sender(sender.phone)));
+        return senderArray
+    };
+
+    static async getSendersUnder10() {
+        var senders = await this.getSenders();
+        return senders.filter(sender => {return sender.sent < 10;} )
+    };
 }
 
 Sender.prototype.addRecipient = function(phone) {

@@ -1,4 +1,12 @@
 TODO 
+
+TIMING
+- add tests for runSend timer 
+- update db sender to remember each text has been sent
+- remove old timing options
+
+OTHER 
+
 - update db fn in sender => timing q
 
 - ensure phone number is the one entered - add test

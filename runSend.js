@@ -1,7 +1,8 @@
-sender = require('./model/src/sender');
+senderModel = require('./model/src/sender.js');
 
-const runSend = function() {
-    console.log("hello")
+const runBatch = async function() {
+    senders = await senderModel.getSendersUnder10();
+    senders.forEach(sender => { sender.run() })
 };
 
-runSend()
+runBatch();
